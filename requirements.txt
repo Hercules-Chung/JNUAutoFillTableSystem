@@ -1,0 +1,3 @@
+PyEmail
+selenium
+pymysql

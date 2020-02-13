@@ -7,7 +7,7 @@ import pymysql
 from smtplib import SMTP_SSL
 from email.mime.text import MIMEText
 from email.header import Header
-
+PATH_TO_CHROME_DRIVER = '/usr/bin/chromedriver'
 class TableRobot:
     db = pymysql.connect("aliyun.linjiaqin.xyz","root","toor","JNUSTU")
     postURLToLogin = "https://ehall.jnu.edu.cn/infoplus/form/XNYQSB/start"
@@ -47,8 +47,8 @@ class TableRobot:
         chrome_options.add_argument('--disable-extensions')
         chrome_options.add_argument('--disable-gpu') #谷歌文档提到需要加上这个属性来规避bug
         chrome_options.add_argument('--headless')
-        browser = webdriver.Chrome('/usr/bin/chromedriver',chrome_options=chrome_options)
-        # browser = webdriver.Chrome("F:\迅雷下载\chromedriver.exe")
+        # specify the path of chrome driver.
+        browser = webdriver.Chrome(PATH_TO_CHROME_DRIVER,chrome_options=chrome_options)
         browser.get(self.postURLToLogin)
         # 填表
         # 登录

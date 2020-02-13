@@ -1,5 +1,11 @@
 CREATE DATABASE JNUSTU DEFAULT SET utf8;
 
+create table LoginData(
+    user CHAR(10) NOT NULL,
+    password VARCHAR(30) NOT NULL,
+    Email VARCHAR(20) NOT NULL
+);
+
 CREATE TABLE UserInfo(
     user CHAR(10) NOT NULL,
     teacherName VARCHAR(20) NOT NULL,
@@ -14,8 +20,3 @@ CREATE TABLE UserInfo(
 
 ALTER TABLE UserInfo ADD CONSTRAINT FD_KEY FOREIGN KEY(user) REFERENCES LoginData(user) ON DELETE CASCADE;
 
-create table LoginData(
-    user CHAR(10) NOT NULL,
-    password VARCHAR(30) NOT NULL,
-    Email VARCHAR(20) NOT NULL
- );
