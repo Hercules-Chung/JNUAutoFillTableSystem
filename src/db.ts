@@ -1,9 +1,9 @@
 import * as mysql from 'mysql';
 import {promisify} from 'util';
 const connection = mysql.createConnection({
-    host: 'aliyun.linjiaqin.xyz',
-    user: 'root',
-    password: 'toor',
+    host: '*****',
+    user: '******',
+    password: '******',
     database: 'JNUSTU'
 });
 
