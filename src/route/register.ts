@@ -95,7 +95,6 @@ function addUserToDatabase(req){
     );
     connection.query(query,(err,result,fields)=>{
         if(err) throw err;
-        console.log("addUsreToDatabase",result)
     })
 }
 register.post('/',async (req:express.Request,res,next)=>{

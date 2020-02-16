@@ -2,5 +2,5 @@
 built/
 .vscode/
 node_modules/
-Untitled.ipynb
+*.ipynb
 yarn.lock
